@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70vw;
+}
+
+h1:first-of-type {
+  margin: 10px 0 25px;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
