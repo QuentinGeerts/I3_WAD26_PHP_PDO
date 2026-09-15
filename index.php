@@ -53,6 +53,26 @@ $routes = [
     'title' => 'Détails de l\'auteur',
   ],
 
+  /**
+   * Gestion de l'authentification
+   */
+
+  'register' => [
+    'file' => 'pages/auth/register.php',
+    'title' => 'S\'enregistrer',
+  ],
+
+  'login' => [
+    'file' => 'pages/auth/login.php',
+    'title' => 'Se connecter',
+  ],
+
+  'logout' => [
+    'file' => 'pages/auth/logout.php',
+    'title' => 'Se déconnecter',
+  ],
+
+
 ];
 
 $page = $_GET['page'] ?? '';
