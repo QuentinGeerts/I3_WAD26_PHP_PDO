@@ -21,7 +21,7 @@ $livres = $pdo->query($sql)->fetchAll();
       <h2><?= $livre["titre"] ?></h2>
 
       <div class="actions">
-        <a href="index.php?page=book-details&amp;id=<?= $livre['id'] ?>">Détails</a>
+        <a href="index.php?page=book-details&amp;id=<?= $livre['id'] ?>" class="btn">Détails</a>
       </div>
 
     </article>

@@ -59,6 +59,6 @@ if ($id !== false && $id !== null) {
 
   </dl>
 
-  <p><a href="?page=books">&larr; Retour à la liste</a></p>
+  <a href="?page=books" class="btn btn-back">Retour à la liste</a>
 
 <?php endif ?>

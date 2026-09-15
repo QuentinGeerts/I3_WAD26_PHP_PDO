@@ -9,6 +9,9 @@ $routes = [
     'title' => 'Accueil'
   ],
 
+  /**
+   * Gestion des livres
+   */
   'books' => [
     'file' => 'pages/books/read.php',
     'title' => 'Liste des livres'
@@ -17,6 +20,20 @@ $routes = [
   'book-details' => [
     'file' => 'pages/books/details.php',
     'title' => 'Détails du livre'
+  ],
+
+  /**
+   * Gestion des auteurs
+   */
+
+  'authors' => [
+    'file' => 'pages/authors/authors-list.php',
+    'title' => 'Liste des auteurs',
+  ],
+
+  'author-details' => [
+    'file' => 'pages/authors/author-details.php',
+    'title' => 'Détails de l\'auteur',
   ],
 
 ];
