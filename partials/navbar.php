@@ -6,6 +6,7 @@
       Gestion des livres
       <ul>
         <li><a href="index.php?page=books">Liste des livres</a></li>
+        <li><a href="index.php?page=book-create">Création d'un livre</a></li>
       </ul>
     </li>
     

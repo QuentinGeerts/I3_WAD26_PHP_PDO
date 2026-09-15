@@ -23,6 +23,8 @@ if ($id !== false && $id !== null) {
 
   $author = $statement->fetch();
 
+  $title = 'Auteur: ' . $author["prenom"] . ' ' . $author["nom"];
+
   // Récupération des livres de l'auteur
 
   $sql = "SELECT

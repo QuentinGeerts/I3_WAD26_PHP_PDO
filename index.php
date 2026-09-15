@@ -22,6 +22,11 @@ $routes = [
     'title' => 'Détails du livre'
   ],
 
+  'book-create' => [
+    'file' => 'pages/books/create.php',
+    'title' => 'Création d\'un livre',
+  ],
+
   /**
    * Gestion des auteurs
    */
@@ -55,8 +60,13 @@ require_once 'config/database.php';
 
 // Assembler les pages
 
-require_once 'partials/header.php';
+ob_start();
 require_once $file;
+$content = ob_get_clean();
+
+
+require_once 'partials/header.php';
+echo $content;
 require_once 'partials/footer.php';
 
 ?>
