@@ -30,7 +30,7 @@ if ($id !== false && $id !== null) {
 
 
 <?php if (!$livre) : ?>
-
+  <?php http_response_code(404); ?>
   <h1>Livre introuvable</h1>
   <p>Aucun livre ne correspond à l'id <?= $id ?>.</p>
 

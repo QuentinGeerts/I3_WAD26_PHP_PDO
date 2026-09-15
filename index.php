@@ -27,6 +27,18 @@ $routes = [
     'title' => 'Création d\'un livre',
   ],
 
+  'book-delete' => [
+    'file' => 'pages/books/book-delete.php',
+    'title' => 'Suppression d\'un livre'
+  ],
+
+  'book-edit' => [
+    'file' => 'pages/books/book-update.php',
+    'title' => 'Modification d\'un livre'
+  ],
+
+
+
   /**
    * Gestion des auteurs
    */
