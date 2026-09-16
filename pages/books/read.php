@@ -22,16 +22,19 @@ $livres = $pdo->query($sql)->fetchAll();
 
       <div class="actions">
         <a href="index.php?page=book-details&amp;id=<?= $livre['id'] ?>" class="btn">Détails</a>
-        <a href="index.php?page=book-edit&amp;id=<?= $livre['id'] ?>" class="btn">Modifier</a>
-        
-        <form 
-          method="post" 
-          action="index.php?page=book-delete"
-          onsubmit="return confirm('Voulez-vous supprimer <?= $livre['titre'] ?> ?')"
-        >
-          <input type="hidden" name="id" value="<?= $livre['id'] ?>">
-          <button class="btn">🗑️</button>
-        </form>
+
+        <?php if ($_SESSION['user']['role'] === 'admin') : ?>
+          <a href="index.php?page=book-edit&amp;id=<?= $livre['id'] ?>" class="btn">Modifier</a>
+
+          <form
+            method="post"
+            action="index.php?page=book-delete"
+            onsubmit="return confirm('Voulez-vous supprimer <?= $livre['titre'] ?> ?')">
+            <input type="hidden" name="id" value="<?= $livre['id'] ?>">
+            <button class="btn">🗑️</button>
+          </form>
+
+        <?php endif ?>
 
       </div>
 

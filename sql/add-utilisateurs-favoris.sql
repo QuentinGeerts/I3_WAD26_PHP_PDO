@@ -32,6 +32,8 @@ CREATE TABLE dbo.utilisateur (
     -- produite par password_hash(). Bcrypt en fait 60, mais les algorithmes plus
     -- récents (argon2id) sont plus longs : on prévoit large.
     mot_de_passe  NVARCHAR (255) NOT NULL,
+    role          NVARCHAR (10) NOT NULL
+        CONSTRAINT DF_utilisateur_role DEFAULT 'user',
 
     date_creation DATETIME2      NOT NULL
         CONSTRAINT DF_utilisateur_date DEFAULT SYSUTCDATETIME(),
